@@ -9,8 +9,8 @@ def printinfo(house):
         print("{:<15}    ${:<}".format(house.members[uid], amount))
     print("Total Monthly Collection: ${:.2f}".format(sum(list(house.rent.values())) + house.operatorrent))
     print("Recent Transactions: ")
-    for date, transtype, message, name in [("Date", "Transaction Type", "Request Message", "Name")] + house.transactions[::-1]:
-        print("{}     {:<}    {:<}    {:<}".format(date, transtype, message, name))
+    for date, transtype, amount, message, name in [("Date", "Transaction Type", "Amount", "Request Message", "Name")] + house.transactions[::-1]:
+        print("{:<12}     {:<16}    {:<10}    {:<20}    {:<}".format(date, transtype, amount, message, name))
     print("\n\n")
 
 
