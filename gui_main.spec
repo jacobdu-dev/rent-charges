@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['gui_main.py'],
-             pathex=['/Users/jacobdu/Documents/Repositories/rent-charges'],
+             pathex=['E:\\Repositories\\rent-charges'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -30,8 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=False , icon='icon.icns')
-app = BUNDLE(exe,
-             name='gui_main.app',
-             icon='icon.icns',
-             bundle_identifier='com.jacobdu-dev')
+          console=False , icon='icon.ico')
