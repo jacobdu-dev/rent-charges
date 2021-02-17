@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['venmo_key.py'],
-             pathex=['/Users/jacobdu/Documents/Repositories/rent-charges'],
+             pathex=['E:\\Repositories\\rent-charges'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=True , icon='icon.ico')
