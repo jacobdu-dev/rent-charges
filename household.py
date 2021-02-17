@@ -52,20 +52,11 @@ class House():
         Sends venmo requests of self.rent[uid] to all members of the profile excluding operator.
         Returns True if process is successful.
         """
-        if (sum(list(self.rent.values())) + self.operatorrent) < self.totalrent:
-            while True:
-                re = input("Amount to be charged (${:.2f}) does not cover the total rent burden (${:.2f}). Would you like to continue? (y/n)".format(sum(list(self.rent.values())), self.totalrent))
-                if re == 'y':
-                    break
-                elif re == 'n':
-                    return False
-                else:
-                    print("Invalid response!")
         for uid in list(self.rent.keys()):
             amount = self.rent[uid]
             charge = self.session.payment.request_money(amount=amount, note=message, target_user_id=int(self.venmo[uid].id))
             if charge != True:
-                print("Error: ", charge)
+                return False, str("Error: " + str(charge))
             else:
                 self.transactions.append((date.today().strftime("%b-%d-%Y"), "Request", amount, message, self.members[uid]))
         return True
@@ -88,7 +79,7 @@ class House():
                 continue
             charge = self.session.payment.request_money(amount=icharges[uid], note=message, target_user_id=int(self.venmo[uid].id))
             if charge != True:
-                print("Error: ", charge)
+                return False, str("Error: " + str(charge))
             else:
                 self.transactions.append((date.today().strftime("%b-%d-%Y"), "Request", amount, message, self.members[uid]))
         return True

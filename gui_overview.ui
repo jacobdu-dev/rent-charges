@@ -6,17 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>483</height>
+    <width>817</width>
+    <height>562</height>
    </rect>
   </property>
   <property name="minimumSize">
-   <size>
-    <width>480</width>
-    <height>483</height>
-   </size>
-  </property>
-  <property name="maximumSize">
    <size>
     <width>480</width>
     <height>483</height>
@@ -34,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
+      <y>90</y>
       <width>131</width>
       <height>16</height>
      </rect>
@@ -47,7 +41,7 @@
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>20</y>
+      <y>90</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -59,7 +53,7 @@
      <number>8</number>
     </property>
     <property name="readOnly">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="placeholderText">
      <string/>
@@ -69,7 +63,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>50</y>
+      <y>120</y>
       <width>101</width>
       <height>20</height>
      </rect>
@@ -82,7 +76,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>50</y>
+      <y>120</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -94,7 +88,7 @@
      <number>8</number>
     </property>
     <property name="readOnly">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="placeholderText">
      <string/>
@@ -104,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>80</y>
+      <y>150</y>
       <width>121</width>
       <height>16</height>
      </rect>
@@ -117,7 +111,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>100</y>
+      <y>170</y>
       <width>441</width>
       <height>131</height>
      </rect>
@@ -130,7 +124,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
+      <y>330</y>
       <width>441</width>
       <height>131</height>
      </rect>
@@ -143,7 +137,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>240</y>
+      <y>310</y>
       <width>161</width>
       <height>16</height>
      </rect>
@@ -152,37 +146,11 @@
      <string>Recent Transactions</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_sq">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>410</y>
-      <width>111</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Send Charges</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>410</y>
-      <width>101</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Edit Profile</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>410</y>
+      <x>340</x>
+      <y>480</y>
       <width>111</width>
       <height>23</height>
      </rect>
@@ -191,34 +159,302 @@
      <string>Save and Quit</string>
     </property>
    </widget>
+   <widget class="QRadioButton" name="radio_rent">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>160</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rent</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="text_charge_amount">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>220</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>250</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Venmo Request Message</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_sendrequest">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>470</y>
+      <width>171</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Send Venmo Request</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>220</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Charge Amount</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="list_members_charged">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>320</y>
+      <width>291</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="text_requestmessage">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>270</y>
+      <width>291</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radio_other">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>160</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Other</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>300</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Members Charged</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>160</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Charge Type</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="check_splitbyrent">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>190</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Split by Rent Distribution</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>80</y>
+      <width>20</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sm_icon.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>0</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Rent Manager</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>by Jacob Du</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>110</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Send Charges</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>831</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>480</width>
-     <height>22</height>
+     <width>817</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuProfile">
     <property name="title">
      <string>Profile</string>
     </property>
-    <addaction name="actionSave"/>
-    <addaction name="actionSave_and_Exit"/>
+    <addaction name="action_newprofile"/>
+    <addaction name="action_import"/>
+    <addaction name="separator"/>
+    <addaction name="action_export"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="action_addmember"/>
+    <addaction name="separator"/>
+    <addaction name="action_delmember"/>
    </widget>
    <addaction name="menuProfile"/>
+   <addaction name="menuEdit"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionSave">
+  <action name="action_import">
    <property name="text">
-    <string>Save</string>
+    <string>Import Profile</string>
    </property>
   </action>
-  <action name="actionSave_and_Exit">
+  <action name="action_export">
    <property name="text">
-    <string>Save and Exit</string>
+    <string>Export Profile</string>
+   </property>
+  </action>
+  <action name="action_newprofile">
+   <property name="text">
+    <string>New Profile</string>
+   </property>
+  </action>
+  <action name="action_addmember">
+   <property name="text">
+    <string>Add Member</string>
+   </property>
+  </action>
+  <action name="action_delmember">
+   <property name="text">
+    <string>Delete Member</string>
    </property>
   </action>
  </widget>
