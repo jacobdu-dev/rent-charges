@@ -61,7 +61,7 @@ class MainView(QtWidgets.QMainWindow, Ui_main_view):
             msgBox.setText('Success!')
             msgBox.setInformativeText("Successfully removed member!")
             msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-            msgBox.exec_()
+            msgBox.show()
             self.updateview()
     def addmember(self):
         name, ok_pressed = QInputDialog.getText(self, 'Name of New Member', 'Please enter your the name of the new member.')
@@ -82,7 +82,7 @@ class MainView(QtWidgets.QMainWindow, Ui_main_view):
                         msgBox.setText('Success!')
                         msgBox.setInformativeText("Successfully added member!")
                         msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-                        msgBox.exec_()
+                        msgBox.show()
                         self.updateview()
 
     def updaterent(self):
@@ -148,7 +148,7 @@ class MainView(QtWidgets.QMainWindow, Ui_main_view):
                     msgBox.setText('Success!')
                     msgBox.setInformativeText("Profile was created. Please do not forget to save profile when you're finished adding members")
                     msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-                    msgBox.exec_()
+                    msgBox.show()
                     house.startclient()
                     self.updateview()
 
@@ -158,7 +158,7 @@ class MainView(QtWidgets.QMainWindow, Ui_main_view):
         if file_path != '':
             house.export(file_path)
             if q:
-                quit()
+                sys.exit()
             else:
                 self.updateview()
 

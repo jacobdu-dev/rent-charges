@@ -45,7 +45,7 @@ class House():
           return False
         self.members[uid] = name
         self.getuser(uid, venmo)
-        self.rent = rent
+        self.rent[uid] = rent
         return True
     def chargerent(self, message = "Rent"):
         """
